@@ -4,11 +4,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public class ClientHandler implements Runnable {
+public class ClientController implements Runnable {
 
     private Socket clientSocket;
 
-    public ClientHandler(Socket socket) {
+    public ClientController(Socket socket) {
       this.clientSocket = socket;
     }
 
@@ -26,7 +26,6 @@ public class ClientHandler implements Runnable {
 
           System.out.println("Received message: " + message);
 
-          // send message to all connected clients
           out.println(message);
         }
       } catch (IOException e) {

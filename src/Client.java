@@ -11,7 +11,7 @@ public class Client {
     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
     while (true) {
-      System.out.print("Enter message: ");
+      System.out.print("Type message: ");
       String message = keyboard.readLine();
 
       out.println(message);

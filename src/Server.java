@@ -10,7 +10,7 @@ public class Server {
       Socket clientSocket = serverSocket.accept();
       System.out.println("New client connected");
 
-      Thread t = new Thread(new ClientHandler(clientSocket));
+      Thread t = new Thread(new ClientController(clientSocket));
       t.start();
 
 
